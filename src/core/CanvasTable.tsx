@@ -154,6 +154,11 @@ class CanvasTable {
         this.render();
       }, 30)
     }
+
+    if (this.style.modalBd) {
+      this.ctx.fillStyle = this.style.modalBd;
+      this.ctx.fillRect(0, 0, this.width, this.height);
+    }
   }
 
   // scrollPosition = {scrollLeft: 0, scrollTop: 0};
@@ -238,7 +243,7 @@ class CanvasTable {
           className={'x-canvas-table'}
           style={{padding: `${WRAPPER_PADDING}px`}}
         />
-      )
+      ) as any
     }
     return this._wrapper;
   }
@@ -254,7 +259,7 @@ class CanvasTable {
         height={height * PIXEL_RATIO}
         style={{height: `${height}px`, width: `${width}px`}}
         ref={ref => {this.canvas = ref}}
-      />
+      /> as any
     );
 
     const scroll = (
@@ -285,7 +290,7 @@ class CanvasTable {
     );
     this.wrapper.appendChild(scroll.wrapper);
 
-    this.tooltip = <Tooltip />
+    this.tooltip = <Tooltip /> as any
     this.wrapper.appendChild(this.tooltip.wrapper);
   }
 

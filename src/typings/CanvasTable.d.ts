@@ -3,7 +3,7 @@ import {Column} from "../table/Column";
 import HeaderTreeNode from "../table/HeaderTreeNode";
 import {BodyRow} from "../table/BodyRow";
 import Layer from "../component/Layer";
-import {IComponent} from "./Component";
+import {IComponent, ILayerStyleProps} from "./Component";
 import {obj} from "./common";
 
 export declare module ICanvasTable {
@@ -22,6 +22,7 @@ export declare module ICanvasTable {
     headerBackColor? : string
     headerRowHeight? : number
     padding?: number  // left and right padding of table's cell
+    modalBd?: string
   }
 
   interface ITableStyleProps {
@@ -60,6 +61,7 @@ export declare module ICanvasTable {
     children?: IColumn[]
     fixed?: 'left' | 'right'
     render?: (value, record) => 'string' | Layer
+    styleColumn?: ILayerStyleProps,
     onCell?: ITableEventHandler
   }
 
@@ -82,12 +84,6 @@ export declare module ICanvasTable {
     table: CanvasTable
     index: number
     onRow?: ITableEventHandler
-  }
-
-  interface IHeaderNodeProps{
-    colProps: IColumn
-    parent?: HeaderTreeNode
-    table: CanvasTable
   }
 
   interface IBaseCellProps {

@@ -1,5 +1,23 @@
 import Layer from "../component/Layer";
 
+export interface ILayerStyleProps {
+  top?: number
+  left?: number
+  width?: number | string
+  height?: number | string
+  padding?: number | number[]
+  color?: string
+  backgroundColor?: string;
+  border?: string | string[]
+  fontFamily?: string
+  fontSize?: string
+  fontWeight?: 'normal' | 'bold'
+  zIndex?: number
+  align?: 'left' | 'center' | 'right'
+  overflow?: 'hidden' | 'ellipsis'
+  verticalAlign?: 'top' | 'middle' | 'bottom'
+}
+
 export declare module IComponent {
   interface ILayerEventProps {
     type?: keyof IEventCollection
@@ -24,7 +42,9 @@ export declare module IComponent {
     gutter?: number
     popTitle?: string
     disabled?: boolean
-    children?: Layer[]
+    children?: Layer[],
+    validate?: string
+    fill?: string | Function
   }
 
   interface ILayerTextProps extends ILayerProps {
