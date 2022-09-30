@@ -15,6 +15,7 @@ import Text from "../component/Text";
 import Svg from "../component/Svg";
 import Tooltip from './Tooltip';
 
+
 type ITableStyle = ICanvasTable.ITableStyle;
 type ICanvasTableProps = ICanvasTable.ICanvasTableProps;
 
