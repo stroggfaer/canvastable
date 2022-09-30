@@ -73,12 +73,12 @@ class CanvasTable {
   }
 
   ctxInit () {
-    this.ctx = this.canvas.getContext('2d', { alpha: true });
-    this.ctx.setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
-    this.ctx.fillStyle = this.style.textColor;
-    this.ctx.font = this.style.fontSize + ' ' + this.style.fontFamily;
-    this.ctx.textBaseline = 'middle';
-    this.ctx.strokeStyle = this.style.borderColor;
+    // this.ctx = this.canvas.getContext('2d', { alpha: true });
+    // this.ctx.setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
+    // this.ctx.fillStyle = this.style.textColor;
+    // this.ctx.font = this.style.fontSize + ' ' + this.style.fontFamily;
+    // this.ctx.textBaseline = 'middle';
+    // this.ctx.strokeStyle = this.style.borderColor;
   }
 
   header: HeaderTree;
