@@ -192,9 +192,7 @@ class CanvasTable {
   }
 
   ctxInit() {
-    this.ctx = this.canvas.getContext('2d', {
-      alpha: false
-    });
+    this.ctx = this.canvas.getContext('2d');
     this.ctx.setTransform(_style.PIXEL_RATIO, 0, 0, _style.PIXEL_RATIO, 0, 0);
     this.ctx.fillStyle = this.style.textColor;
     this.ctx.font = this.style.fontSize + ' ' + this.style.fontFamily;
