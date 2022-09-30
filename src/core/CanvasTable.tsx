@@ -27,7 +27,6 @@ class CanvasTable {
   static Svg = Svg
 
   style: ITableStyle = null;
-
   constructor(public props: ICanvasTableProps) {
     this.init()
   }
